@@ -30,4 +30,5 @@ NovusHigher <- NovusLib + 1.96*(sqrt(NovusLib*(1-NovusLib))/sqrt(4000))
 SifoLower <- SifoLib - 1.96*(sqrt(SifoLib*(1-SifoLib))/sqrt(4000))
 SifoHigher <- SifoLib + 1.96*(sqrt(SifoLib*(1-SifoLib))/sqrt(4000))
 
+PresentLibSifo <- 5.7
 
