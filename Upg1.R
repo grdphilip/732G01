@@ -23,12 +23,19 @@ NovusLib <- 0.021
 NovusResp <- 4000 #Respondenter novus
 SifoResp <- 6444 #Respondenter sifo
 
-#Räkna ut 95% konf intervall
+#Räkna ut 95% konf intervall - Z-test ty populatioppnsandel.
 NovusLower <- NovusLib - 1.96*(sqrt(NovusLib*(1-NovusLib))/sqrt(4000))
 NovusHigher <- NovusLib + 1.96*(sqrt(NovusLib*(1-NovusLib))/sqrt(4000))
 
 SifoLower <- SifoLib - 1.96*(sqrt(SifoLib*(1-SifoLib))/sqrt(4000))
 SifoHigher <- SifoLib + 1.96*(sqrt(SifoLib*(1-SifoLib))/sqrt(4000))
 
-PresentLibSifo <- 5.7
+PresentLibSifo <- 0.057
+PresentLibSifoResp <- 1796
+Diff <- PresentLibSifo - NovusLib
+Diff
+
+Diff - 1.96*(sqrt((NovusLib*(1-NovusLib))/NovusResp)+(PresentLibSifo*(1-PresentLibSifo))/PresentLibSifoResp)
+Diff + 1.96*(sqrt((NovusLib*(1-NovusLib))/NovusResp)+(PresentLibSifo*(1-PresentLibSifo))/PresentLibSifoResp)
+#95% intervall 
 
